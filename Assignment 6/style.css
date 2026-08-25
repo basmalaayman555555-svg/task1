@@ -1,0 +1,620 @@
+:root {
+    --main-neon: #ccff00;
+    --bg-dark: #12161f;
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.text-main {
+    color: var(--main-neon) !important;
+}
+
+.btn-main {
+    background-color: var(--main-neon) !important;
+    color: #000 !important;
+    border: none;
+}
+
+.btn-outline-main {
+    border: 2px solid var(--main-neon) !important;
+    color: #fff !important;
+    background: transparent;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.hero-img-box {
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.active-players-card {
+    background-color: rgba(15, 20, 28, 0.95);
+    border: 1px solid #00e5ff;
+}
+
+
+.latest-games {
+  padding: 50px 0;
+  background-color: #1a202c; 
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.section-header {
+  margin-bottom: 35px;
+}
+
+.subtitle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.subtitle-wrapper .line {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #ccff00;
+}
+.subtitle-text {
+  color: #ccff00;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.game-card {
+  height: 350px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+
+.card-overlay {
+  background: rgba(204, 255, 0, 0.35); 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.game-card:hover {
+ border: 2px solid #ccff00;
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+}
+
+.card-overlay {
+    background: rgba(204, 255, 0, 0.35);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.game-card:hover .card-overlay {
+  opacity: 1;
+}
+
+
+.custom-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.custom-arrow:hover {
+  border-color: #ccff00;
+  color: #ccff00;
+}
+
+
+.services-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: #1e2129;
+  border: 1px solid #333;
+  border-radius: 20px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.icon-box {
+  background-color: #2b62d9;
+  color: #cbfb45;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.card h3 {
+  color: #fff;
+  font-size: 18px;
+}
+
+.card.image-card {
+  background-color: #cbfb45;
+  padding: 0;
+  border: none;
+}
+
+.card.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:not(.image-card)::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid #cbfb45;
+  border-right: 12px solid transparent;
+  display: none;
+}
+
+
+.card:not(.image-card)::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid #cbfb45;
+  border-left: 12px solid transparent;
+  display: none;
+}
+
+
+.card:not(.image-card):hover {
+  border-color: #cbfb45;
+}
+
+.card:not(.image-card):hover::before,
+.card:not(.image-card):hover::after {
+  display: block; 
+}
+
+.card:not(.image-card):hover .icon-box {
+  background-color: #cbfb45; 
+  color: #000; 
+}
+
+
+
+.ticker-section {
+  position: relative;
+  background-color: #121319;
+  z-index: 1;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+}
+
+.track-left {
+  animation: scrollLeft 25s linear infinite;
+}
+
+.track-right {
+  animation: scrollRight 25s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* شكل المربعات والبوردر والأركان الدائرية */
+.brand-card {
+  width: 110px;
+  height: 110px;
+  background-color: #171920;
+  border: 2px solid #2b62d9;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.brand-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.team-section {
+  background-color: #121319;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header styling */
+.team-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbfb45;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.team-subtitle::before,
+.team-subtitle::after {
+  content: '';
+  width: 35px;
+  height: 2px;
+  background-color: #cbfb45;
+}
+
+.team-title {
+  font-size: 2.3rem;
+  letter-spacing: -0.5px;
+}
+
+.team-description {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Card Styling */
+.team-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 360px;
+  background-color: #1a1c23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbfb45;
+}
+
+/* Image Grayscale */
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.team-card:hover .team-img {
+  filter: grayscale(0%);
+}
+
+/* Dark Gradient Overlay */
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(18, 19, 25, 0.95) 0%,
+    rgba(18, 19, 25, 0.3) 50%,
+    transparent 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px;
+}
+
+/* Text Content */
+.member-info {
+  color: #ffffff;
+}
+
+.member-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.member-role {
+  font-size: 11px;
+  color: #cbfb45;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.member-subtext {
+  font-size: 10px;
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+
+/* Vertical Text on Right Side */
+.side-nickname {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 2px;
+}
+
+
+
+
+
+.contact-section {
+  background-color: #121319;
+}
+
+.contact-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbfb45;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.contact-subtitle::before,
+.contact-subtitle::after {
+  content: '';
+  width: 35px;
+  height: 2px;
+  background-color: #cbfb45;
+}
+
+.contact-title {
+  font-size: 2.3rem;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Info Cards */
+.info-card {
+  background-color: #181a20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #cbfb45;
+  color: #121319;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.info-title {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.info-text {
+  font-size: 13px;
+}
+
+/* Neon Community Card */
+.community-card {
+  background-color: #cbfb45;
+  border-radius: 16px;
+}
+
+.community-text {
+  font-size: 13px;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #121319;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.social-btn:hover {
+  color: #cbfb45;
+}
+
+/* Right Form Card */
+.form-card {
+  background-color: #181a20;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.custom-input {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+  font-size: 13px !important;
+}
+
+.custom-input::placeholder {
+  color: #64748b !important;
+}
+
+.custom-input:focus {
+  border-color: #cbfb45 !important;
+  box-shadow: none !important;
+}
+
+/* Checkbox & Button */
+.custom-checkbox {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-checkbox:checked {
+  background-color: #cbfb45;
+  border-color: #cbfb45;
+}
+
+.btn-neon {
+  background-color: #cbfb45;
+  color: #121319;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.btn-neon:hover {
+  background-color: #b3e635;
+  color: #121319;
+}
+
+
+/* Footer Background & Base */
+.footer-section {
+  background-color: #0b0c10;
+  color: #ffffff;
+}
+
+/* Brand Logo */
+.brand-icon {
+  background-color: #cbfb45;
+  color: #121319;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.brand-name {
+  color: #cbfb45;
+}
+
+.footer-text {
+  color: #94a3b8;
+  font-size: 14px;
+  max-width: 300px;
+}
+
+/* Headings */
+.footer-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Links List */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #cbfb45;
+}
+
+/* Social Media Icons */
+.footer-socials a {
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #cbfb45;
+}
+
+/* Legal Links Hover */
+.footer-legal a:hover {
+  color: #ffffff !important;
+}
+
+
+.game-card {
+  height: 280px !important;
+  width: 100%;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+
