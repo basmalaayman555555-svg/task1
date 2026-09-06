@@ -1,0 +1,297 @@
+/* Custom Global Styles */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 1. Header & Active Underline Styles */
+.custom-navbar {
+    background-color: #ffffff !important;
+}
+
+.custom-navbar .nav-link.nav-custom {
+    color: #4b5563;
+    font-weight: 500;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-navbar .nav-link.nav-custom:hover,
+.custom-navbar .nav-link.nav-custom.active {
+    color: #7c3aed !important;
+    border-bottom: 2px solid #7c3aed;
+}
+
+/* Mega Dropdown Customization */
+.dropdown-menu {
+    border-radius: 12px !important;
+    top: 100% !important;
+}
+
+/* 2. Hero Section Background With Custom Image & Overlay */
+.hero-section {
+    /* تم استخدام صورة Villa المرفقة مع إعطائها طبقة بنفسجية مميزة overlay */
+    background: linear-gradient(rgba(88, 28, 135, 0.78), rgba(109, 40, 217, 0.82)), 
+                url('hero-bg.jpg') center/cover no-repeat;
+    min-height: calc(100vh - 76px);
+}
+
+.hero-description {
+    max-width: 800px;
+    line-height: 1.6;
+    color: #e9d5ff;
+}
+
+/* 3. Search Box & Custom Input Controls */
+.search-box {
+    max-width: 980px;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.custom-input {
+    border: 1.5px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    color: #374151;
+    background-color: #ffffff;
+}
+
+.input-group .custom-input {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.input-group-text {
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+    border: 1.5px solid #d1d5db;
+}
+
+.custom-input:focus {
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2) !important;
+}
+
+/* 4. Button & Accents */
+.btn-purple {
+    background-color: #8b5cf6;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-purple:hover {
+    background-color: #7c3aed;
+}
+
+.text-purple {
+    color: #7c3aed !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+.text-gradient {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #d97706 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-purple {
+    background-color: #6366f1 !important;
+}
+
+.badge-line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: #6366f1;
+}
+
+.property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.property-img {
+    height: 240px;
+    object-fit: cover;
+}
+
+.agent-img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.property-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+.btn-purple {
+    background-color: #6366f1;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-purple:hover {
+    background-color: #4f46e5;
+    color: #ffffff;
+}
+
+.btn-outline-purple {
+    color: #6366f1;
+    border-color: #e0e7ff;
+    background-color: #f5f3ff;
+}
+
+.btn-outline-purple:hover {
+    background-color: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+.favorite-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Bootstrap Tabs Custom Styling */
+#services .nav-tabs .nav-link.active {
+  color: #6366f1 !important;
+  background-color: #f3f0ff !important;
+  border-bottom: 3px solid #6366f1 !important;
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* الخلفية البنفسجية المطلوبة بالظبط */
+.testimonials-section {
+  background-color: purple !important;
+}
+
+/* تصميم أسهم التنقل الدائرية المفعلة */
+.custom-arrow {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* تضبيط أبعاد الأسهم الجانبية خارج الكارت */
+.carousel-control-prev.custom-arrow {
+  left: -70px;
+}
+
+.carousel-control-next.custom-arrow {
+  right: -70px;
+}
+
+/* إخفاء الأسهم لو الشاشة صغرت جداً عشان متغطيليش الكارت */
+@media (max-width: 991px) {
+  .carousel-control-prev.custom-arrow { left: -10px; }
+  .carousel-control-next.custom-arrow { right: -10px; }
+}
+
+/* تضبيط شكل النقط الدائرية (Indicators) */
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  margin: 0 6px !important;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff !important;
+}
+
+
+/* Custom Accordion Styling */
+.custom-faq-accordion .accordion-item {
+    background-color: #ffffff;
+    border-radius: 12px !important;
+}
+
+.custom-faq-accordion .accordion-button {
+    background-color: #ffffff;
+    box-shadow: none !important;
+    font-size: 1.05rem;
+}
+
+/* إزالة الخلفية والحدود الزرقاء عند الضغط */
+.custom-faq-accordion .accordion-button:not(.collapsed) {
+    background-color: #ffffff;
+    color: #0d6efd !important;
+    box-shadow: none;
+}
+
+/* ضبط السهم وإلغاء ألوان الـ Active الافتراضية */
+.custom-faq-accordion .accordion-button::after {
+    background-size: 1rem;
+}
+
+
+/* Contact Section Card Styling */
+.contact-card {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent !important;
+}
+
+/* تأثير التمرير بالماوس */
+.contact-card:hover {
+    border-color: #4a51e2 !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Focus Input Fields Styling */
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(241, 99, 241, 0.589) !important;
+    border-color: #6366f1 !important;
+    background-color: #ffffff !important;
+}
+
+/* Footer Link Hover */
+footer a:hover {
+    color: #ffffff !important;
+
+}
+
