@@ -1,0 +1,588 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: #eef4fb;
+  color: #1f2937;
+}
+
+small {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #fff;
+  border-left: 1px solid #e5eaf2;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo-icon {
+  background: #1d4ed8;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 4px;
+}
+
+.sidebar nav a {
+  color: #1f2937;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.sidebar nav a.active {
+  background: #e0ecff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.side-title {
+  margin: 20px 0 8px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.main {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.navbar {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status {
+  color: #16a34a;
+  background: #ecfdf5;
+  font-size: 13px;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 18px;
+  height: 18px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  padding: 5px 10px;
+}
+
+.user img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.user strong {
+  display: block;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.stat-card span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 8px 0;
+}
+
+.stat-card small {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.up {
+  color: #16a34a;
+}
+
+.down {
+  color: #ee9c05;
+
+}
+
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.side-col {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.box {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.box h3 {
+  margin-bottom: 14px;
+}
+
+.box-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-head a,
+.all-link {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.all-link {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.activity {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #f4f8ff;
+}
+
+.activity p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 3px 0;
+}
+
+.blue-line {
+  border-right: 4px solid #1d4ed8;
+}
+
+.green-line {
+  border-right: 4px solid #16a34a;
+}
+
+.act-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #dbeafe;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.bills-total {
+  text-align: center;
+  margin: 10px 0 18px;
+}
+
+.bills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: center;
+}
+
+.bill {
+  display: grid;
+  gap: 3px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th {
+  text-align: right;
+  color: #6b7280;
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f3f8;
+  font-size: 14px;
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.who strong {
+  display: block;
+}
+
+.who img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.t-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.red-bg {
+     background: #fee2e2; 
+    }
+.blue-bg { 
+    background: #dbeafe; 
+}
+.teal-bg { 
+    background: #ccfbf1; 
+}
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.tag.ok {
+     background: #d1fae5;
+      color: #059669; 
+    }
+.tag.wait { 
+    background: #fef3c7; 
+    color: #b45309;
+ }
+.tag.green {
+     background: #d1fae5;
+      color: #059669; 
+    }
+.tag.red { 
+    background: #fee2e2; 
+    color: #dc2626;
+ }
+.tag.blue {
+     background: #dbeafe;
+      color: #1d4ed8;
+     }
+.tag.purple {
+     background: #ede9fe;
+      color: #6d28d9;
+     }
+.tag.teal { 
+    background: #ccfbf1;
+     color: #0f766e; 
+}
+.tag.pink { 
+    background: #fce7f3; 
+    color: #be185d;
+ }
+
+
+
+.row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.mid-col {
+  display: grid;
+  gap: 20px;
+}
+
+.blue-text {
+  color: #1d4ed8;
+}
+
+.budget-total {
+  background: #eaf2ff;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.budget-total h2 {
+  color: #1d4ed8;
+  margin: 4px 0;
+}
+
+.budget-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  background: #e5e7eb;
+  height: 7px;
+  border-radius: 10px;
+  margin: 10px 0 6px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.fill.blue { 
+    background: #2563eb;
+ }
+.fill.orange {
+     background: #f97316;
+     }
+.fill.red { 
+    background: #ef4444; 
+}
+.fill.pink { 
+    background: #d946ef;
+ }
+
+.budget {
+  margin-top: 20px;
+}
+
+.budget-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget-top small {
+  display: block;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.green-dot { 
+    background: #22a06b;
+ }
+.red-dot { 
+    background: #dc2626; 
+}
+
+.chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 180px;
+}
+
+.week {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.bars {
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.bars i {
+  display: block;
+  width: 14px;
+  border-radius: 3px;
+}
+
+.income { 
+    background: #22a06b;
+ }
+.expense { 
+    background: #dc2626; 
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f3f8;
+}
+
+.acc-info {
+  flex: 1;
+}
+
+.acc-info strong {
+  display: block;
+}
+
+.acc-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.green-bg {
+     background: #d1fae5; 
+    }
+.purple-bg { 
+    background: #ede9fe;
+ }
+
+.bank-card {
+  color: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  display: grid;
+  gap: 18px;
+}
+
+.bank-card small {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bank-card h3 {
+  margin: 0;
+  letter-spacing: 1px;
+  direction: ltr;
+  text-align: right;
+}
+
+.card-top,
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chip {
+  width: 36px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.visa {
+     background: #1d3fd8;
+     }
+.master {
+     background: #d6204f;
+     }
+.paypal { 
+    background: #2563eb; 
+}
+.fill.green { background: #22a06b; }
